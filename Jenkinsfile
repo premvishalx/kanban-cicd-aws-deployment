@@ -101,7 +101,7 @@ pipeline {
                             "$CONTAINER_NAME" 2>/dev/null || true)
 
                         if [ "$STATUS" = "healthy" ] && \
-                           curl -fsS "http://127.0.0.1:$APP_PORT/rollback-test-invalid-path" -o /dev/null; then
+                           curl -fsS "http://127.0.0.1:$APP_PORT/" -o /dev/null; then
 
                             echo "SUCCESS: Container is healthy."
                             echo "SUCCESS: Application HTTP response verified."
